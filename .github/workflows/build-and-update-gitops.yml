@@ -12,7 +12,8 @@ env:
 
   # 🖊️ EDIT to change the image registry settings.
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
-  IMAGE_REGISTRY: ${{ secrets.IMAGE_REGISTRY }}
+  IMAGE_REGISTRY: ${{ vars.IMAGE_REGISTRY }}
+  # IMAGE_REGISTRY: ${{ secrets.IMAGE_REGISTRY }}
 
   ROX_API_TOKEN: ${{ secrets.ROX_API_TOKEN }}
   ROX_CENTRAL_ENDPOINT: ${{ secrets.ROX_CENTRAL_ENDPOINT }}
@@ -20,7 +21,8 @@ env:
   # Uncomment this when using Gitlab
   # GITOPS_AUTH_USERNAME: ${{ secrets.GITOPS_AUTH_USERNAME }}
   # Set this to the user for your specific registry
-  IMAGE_REGISTRY_USER: ${{ secrets.IMAGE_REGISTRY_USER }}
+  # IMAGE_REGISTRY_USER: ${{ secrets.IMAGE_REGISTRY_USER }}
+  IMAGE_REGISTRY_USER: ${{ vars.IMAGE_REGISTRY_USER }}
   # Set this password for your specific registry
   IMAGE_REGISTRY_PASSWORD: ${{ secrets.IMAGE_REGISTRY_PASSWORD }}
   # QUAY_IO_CREDS_USR: ${{ secrets.QUAY_IO_CREDS_USR }}
